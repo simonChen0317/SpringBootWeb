@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 //通过@EnableTransactionManagement注解，Boot为应用应用自动装配了事务支持。这对用户并不透明，用户如果想自己定义事务管理器，则在Application类中添加一个即可
 @EnableTransactionManagement
 
-//在springboot中配置MVC很简单，只需要Application类继承Spring Boot提供的Servlet初始化器SpringBootServletInitializer，重写SpringBootServletInitializer的configure()方法。
+//在springboot中配置MVC很简单，只需要Application类继承Spring Boot提供的Servlet初始化器SpringBootServletInitializer，重写SpringBootServletInitializer的configure()方法。·
 public class Application extends SpringBootServletInitializer implements WebApplicationInitializer {
     @Bean
     public PlatformTransactionManager txManager(@Qualifier("dataSource") DataSource dataSource){
