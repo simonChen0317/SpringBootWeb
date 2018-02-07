@@ -17,11 +17,11 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 
 //在springboot中配置MVC很简单，只需要Application类继承Spring Boot提供的Servlet初始化器SpringBootServletInitializer，重写SpringBootServletInitializer的configure()方法。·
-public class Application extends SpringBootServletInitializer implements WebApplicationInitializer {
-    @Bean
-    public PlatformTransactionManager txManager(@Qualifier("dataSource") DataSource dataSource){
-        return new DataSourceTransactionManager(dataSource);
-    }
+public class Application extends SpringBootServletInitializer{
+    //@Bean
+    //public PlatformTransactionManager txManager(@Qualifier("dataSource") DataSource dataSource){
+    //    return new DataSourceTransactionManager(dataSource);
+    //}
 
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(Application.class);
