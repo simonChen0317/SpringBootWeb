@@ -2,18 +2,21 @@ package com.springboot.service.Impl;
 
 import com.springboot.dao.Impl.LoginLogDaoImpl;
 import com.springboot.dao.Impl.UserDaoImpl;
+import com.springboot.dao.LoginLogDao;
+import com.springboot.dao.UserDao;
 import com.springboot.domain.LoginLog;
 import com.springboot.domain.User;
+import com.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService {
 
-	private UserDaoImpl userDao;
+	private UserDao userDao;
 
-	private LoginLogDaoImpl loginLogDao;
+	private LoginLogDao loginLogDao;
 
 
 	public boolean hasMatchUser(String userName, String password) {
@@ -37,12 +40,12 @@ public class UserServiceImpl {
 	}
 
 	@Autowired
-	public void setUserDao(UserDaoImpl userDao) {
+	public void setUserDao(UserDao userDao) {
 		this.userDao = userDao;
 	}
 
 	@Autowired
-	public void setLoginLogDao(LoginLogDaoImpl loginLogDao) {
+	public void setLoginLogDao(LoginLogDao loginLogDao) {
 		this.loginLogDao = loginLogDao;
 	}
 }

@@ -2,6 +2,7 @@ package com.springboot.web;
 
 import com.springboot.domain.User;
 import com.springboot.service.Impl.UserServiceImpl;
+import com.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +12,7 @@ import java.util.Date;
 
 @RestController
 public class LoginController{
-	private UserServiceImpl userService;
+	private UserService userService;
     
 	@RequestMapping(value = {"/","/index.html"})
 	public ModelAndView loginPage(){
@@ -36,7 +37,7 @@ public class LoginController{
 	}
 
 	@Autowired
-	public void setUserService(UserServiceImpl userService) {
+	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}
 }
