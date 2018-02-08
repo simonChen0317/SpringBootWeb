@@ -52,6 +52,12 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
         </dependency>
+
+        <!--spring boot监控功能。spring boot提供了对应用本身、关系数据库链接、MongoDB、Redis、Solr、ElasticSearch、JMS和Rabbit MQ等服务的健康状态的检测功能-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
