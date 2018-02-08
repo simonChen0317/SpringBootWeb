@@ -1,7 +1,6 @@
 package com.springboot.web;
 
 import com.springboot.domain.User;
-import com.springboot.service.Impl.UserServiceImpl;
 import com.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
